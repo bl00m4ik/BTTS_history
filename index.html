@@ -1,1 +1,398 @@
-Test
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>История матчей BTTS</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			margin: 20px;
+			background-color: #f5f5f5;
+		}
+		.container {
+			background-color: white;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+			font-size: 14px;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px;
+			text-align: left;
+			font-weight: bold;
+		}
+		td {
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+		.win {
+			color: #4CAF50;
+			font-weight: bold;
+		}
+		.loss {
+			color: #f44336;
+			font-weight: bold;
+		}
+		.profit-positive {
+			color: #4CAF50;
+			font-weight: bold;
+		}
+		.profit-negative {
+			color: #f44336;
+			font-weight: bold;
+		}
+		.stats {
+			margin-top: 30px;
+			padding: 20px;
+			background-color: #e8f5e9;
+			border-radius: 8px;
+		}
+		.stats h2 {
+			margin-top: 0;
+			color: #2e7d32;
+		}
+		.stats-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 15px;
+			margin-top: 15px;
+		}
+		.stat-item {
+			background-color: white;
+			padding: 15px;
+			border-radius: 5px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		}
+		.stat-label {
+			font-size: 12px;
+			color: #666;
+			margin-bottom: 5px;
+		}
+		.stat-value {
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>📊 История матчей BTTS</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Дата</th>
+					<th>Время</th>
+					<th>Лига</th>
+					<th>Матч</th>
+					<th>Прогноз</th>
+					<th>Вероятность</th>
+					<th>Результат</th>
+					<th>Счет</th>
+					<th>Ставка</th>
+					<th>Коэфф.</th>
+					<th>Исход</th>
+					<th>Прибыль</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>19.12.2025</td>
+					<td>20:00</td>
+					<td>La_Liga</td>
+					<td>Valencia vs Mallorca</td>
+					<td>BTTS NO</td>
+					<td>35.3%</td>
+					<td>BTTS YES</td>
+					<td><b>1:1</b></td>
+					<td>BTTS NO</td>
+					<td>1.69</td>
+					<td><span class="loss">❌ ПРОИГРЫШ</span></td>
+					<td><span class="profit-negative">-1.00</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>13:00</td>
+					<td>La_Liga</td>
+					<td>Real Oviedo vs Celta Vigo</td>
+					<td>BTTS NO</td>
+					<td>28.2%</td>
+					<td>BTTS NO</td>
+					<td><b>0:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.80</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.80</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>14:30</td>
+					<td>Bundesliga</td>
+					<td>Augsburg vs Werder Bremen</td>
+					<td>BTTS NO</td>
+					<td>35.6%</td>
+					<td>BTTS NO</td>
+					<td><b>0:0</b></td>
+					<td>BTTS NO</td>
+					<td>2.21</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+1.21</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>15:00</td>
+					<td>EPL</td>
+					<td>Bournemouth vs Burnley</td>
+					<td>BTTS NO</td>
+					<td>39.0%</td>
+					<td>BTTS YES</td>
+					<td><b>1:1</b></td>
+					<td>BTTS NO</td>
+					<td>1.89</td>
+					<td><span class="loss">❌ ПРОИГРЫШ</span></td>
+					<td><span class="profit-negative">-1.00</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>15:00</td>
+					<td>EPL</td>
+					<td>Brighton vs Sunderland</td>
+					<td>BTTS NO</td>
+					<td>35.8%</td>
+					<td>BTTS NO</td>
+					<td><b>0:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.90</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.90</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>15:00</td>
+					<td>EPL</td>
+					<td>Wolverhampton Wanderers vs Brentford</td>
+					<td>BTTS NO</td>
+					<td>28.2%</td>
+					<td>BTTS NO</td>
+					<td><b>0:2</b></td>
+					<td>BTTS NO</td>
+					<td>1.98</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.98</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>15:15</td>
+					<td>La_Liga</td>
+					<td>Levante vs Real Sociedad</td>
+					<td>BTTS YES</td>
+					<td>60.8%</td>
+					<td>BTTS YES</td>
+					<td><b>1:1</b></td>
+					<td>BTTS YES</td>
+					<td>1.70</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.70</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>17:00</td>
+					<td>Serie_A</td>
+					<td>Lazio vs Cremonese</td>
+					<td>BTTS NO</td>
+					<td>37.3%</td>
+					<td>BTTS NO</td>
+					<td><b>0:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.74</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.74</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>17:30</td>
+					<td>La_Liga</td>
+					<td>Osasuna vs Alaves</td>
+					<td>BTTS NO</td>
+					<td>34.6%</td>
+					<td>BTTS NO</td>
+					<td><b>3:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.67</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.67</span></td>
+				</tr>
+
+				<tr>
+					<td>20.12.2025</td>
+					<td>17:30</td>
+					<td>Bundesliga</td>
+					<td>RasenBallsport Leipzig vs Bayer Leverkusen</td>
+					<td>BTTS YES</td>
+					<td>70.1%</td>
+					<td>BTTS YES</td>
+					<td><b>1:3</b></td>
+					<td>BTTS YES</td>
+					<td>1.45</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.45</span></td>
+				</tr>
+
+				<tr>
+					<td>21.12.2025</td>
+					<td>11:30</td>
+					<td>Serie_A</td>
+					<td>Cagliari vs Pisa</td>
+					<td>BTTS NO</td>
+					<td>31.3%</td>
+					<td>BTTS YES</td>
+					<td><b>2:2</b></td>
+					<td>BTTS NO</td>
+					<td>1.73</td>
+					<td><span class="loss">❌ ПРОИГРЫШ</span></td>
+					<td><span class="profit-negative">-1.00</span></td>
+				</tr>
+
+				<tr>
+					<td>21.12.2025</td>
+					<td>14:30</td>
+					<td>Bundesliga</td>
+					<td>Mainz 05 vs St. Pauli</td>
+					<td>BTTS NO</td>
+					<td>28.2%</td>
+					<td>BTTS NO</td>
+					<td><b>0:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.81</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.81</span></td>
+				</tr>
+
+				<tr>
+					<td>21.12.2025</td>
+					<td>15:15</td>
+					<td>La_Liga</td>
+					<td>Villarreal vs Barcelona</td>
+					<td>BTTS YES</td>
+					<td>80.9%</td>
+					<td>BTTS NO</td>
+					<td><b>0:2</b></td>
+					<td>BTTS YES</td>
+					<td>1.28</td>
+					<td><span class="loss">❌ ПРОИГРЫШ</span></td>
+					<td><span class="profit-negative">-1.00</span></td>
+				</tr>
+
+				<tr>
+					<td>21.12.2025</td>
+					<td>16:30</td>
+					<td>EPL</td>
+					<td>Aston Villa vs Manchester United</td>
+					<td>BTTS YES</td>
+					<td>60.3%</td>
+					<td>BTTS YES</td>
+					<td><b>2:1</b></td>
+					<td>BTTS YES</td>
+					<td>1.90</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.90</span></td>
+				</tr>
+
+				<tr>
+					<td>21.12.2025</td>
+					<td>20:00</td>
+					<td>La_Liga</td>
+					<td>Real Betis vs Getafe</td>
+					<td>BTTS NO</td>
+					<td>25.3%</td>
+					<td>BTTS NO</td>
+					<td><b>4:0</b></td>
+					<td>BTTS NO</td>
+					<td>1.61</td>
+					<td><span class="win">✅ ВЫИГРЫШ</span></td>
+					<td><span class="profit-positive">+0.61</span></td>
+				</tr>
+
+				<tr>
+					<td>22.12.2025</td>
+					<td>20:00</td>
+					<td>EPL</td>
+					<td>Fulham vs Nottingham Forest</td>
+					<td>BTTS NO</td>
+					<td>34.6%</td>
+					<td>-</td>
+					<td><b>-</b></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<div class="stats">
+			<h2>📈 Статистика</h2>
+			<div class="stats-grid">
+				<div class="stat-item">
+					<div class="stat-label">Всего матчей</div>
+					<div class="stat-value">16</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Матчей со ставками</div>
+					<div class="stat-value">15</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Выиграно</div>
+					<div class="stat-value" style="color: #4CAF50;">11</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Проиграно</div>
+					<div class="stat-value" style="color: #f44336;">4</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Процент побед</div>
+					<div class="stat-value">73.3%</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">Общая прибыль</div>
+					<div class="stat-value profit-positive">+4.77</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-label">ROI</div>
+					<div class="stat-value profit-positive">+31.8%</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
